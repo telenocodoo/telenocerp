@@ -1,0 +1,17 @@
+<odoo>
+    <data>
+
+<!--        inherit partner tree and add partner address in tree view-->
+        <record id="view_partner_tree_inherit" model="ir.ui.view">
+            <field name="name">hr.employee</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='parent_id']" position="after">
+                    <field name="address_home_id" string="Partner Name(Address)" />
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>
