@@ -1,0 +1,43 @@
+<odoo>
+    <data>
+
+<!--        inherit sale order form to add project-->
+        <record id="sale_order_form_view_inherit" model="ir.ui.view" >
+            <field name="name">sale.order</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group" position="inside">
+                    <group>
+                        <field name="project_id" />
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+<!--        inherit sale order tree to add project-->
+        <record id="sale_order_tree_inherit" model="ir.ui.view">
+            <field name="name">sale.order</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_quotation_tree_with_onboarding"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='user_id']" position="after">
+                    <field name="project_id" string="Project Name" />
+                </xpath>
+            </field>
+        </record>
+
+<!--        inherit sale order tree to add project-->
+        <record id="sale_order_tree_inherit2" model="ir.ui.view">
+            <field name="name">sale.order</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='user_id']" position="after">
+                    <field name="project_id" string="Project Name" />
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>
