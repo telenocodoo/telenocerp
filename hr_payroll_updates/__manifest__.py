@@ -12,6 +12,6 @@
     'version': '0.1',
     'depends': ['hr_payroll_account'],
     'data': [
-        # 'views/res_users.xml',
+        'views/account_move_view.xml',
     ],
 }
