@@ -2,16 +2,19 @@
 {
     'name': "Sales_ProjectName",
     'summary': """
-        add project in tree view of sale orders""",
+        add Quotation Name in sale orders tree and form view """,
     'description': """
         Sales_ProjectName
     """,
-    'author': "Magdy, helcon",
+    'author': "Magdy, TeleNoc",
     'website': "https://telenoc.org",
     'category': 'sale',
     'version': '0.1',
-    'depends': ['base','sale', 'project'],
+    'depends': ['base','sale'],
     'data': [
         'views/sale_order_view.xml',
+    ],
+    'images': [
+        '/Sales_ProjectName/static/src/img/icon.png'
     ],
 }

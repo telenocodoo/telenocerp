@@ -9,7 +9,7 @@
             <field name="arch" type="xml">
                 <xpath expr="//group" position="inside">
                     <group>
-                        <field name="project_id" />
+                        <field name="q_name" />
                     </group>
                 </xpath>
             </field>
@@ -22,7 +22,7 @@
             <field name="inherit_id" ref="sale.view_quotation_tree_with_onboarding"/>
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='user_id']" position="after">
-                    <field name="project_id" string="Project Name" />
+                    <field name="q_name" />
                 </xpath>
             </field>
         </record>
@@ -34,7 +34,7 @@
             <field name="inherit_id" ref="sale.view_order_tree"/>
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='user_id']" position="after">
-                    <field name="project_id" string="Project Name" />
+                    <field name="q_name"/>
                 </xpath>
             </field>
         </record>
