@@ -2,7 +2,7 @@
 {
     'name': "Telenoc Invoice",
     'summary': """
-        Telenoc Invoice""",
+        Telenoc Invoice report""",
     'description': """
         Telenoc Invoice
     """,
