@@ -180,7 +180,7 @@
     </template>
 
     <template id="external_layout_header" inherit_id="web.external_layout_standard">
-        <xpath expr="//div[@class='header']" position="replace">
+        <xpath expr="//div[1]" position="replace">
             <div id="external_layout_header66" class="header">
                 <style>
                     .report-header{
