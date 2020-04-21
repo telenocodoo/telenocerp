@@ -181,7 +181,7 @@
 
     <template id="external_layout_header" inherit_id="web.external_layout_standard">
         <xpath expr="//div[@class='header']" position="replace">
-            <div id="" class="header">
+            <div id="header" class="header">
                 <style>
                     .report-header{
                     width:100% !important;
