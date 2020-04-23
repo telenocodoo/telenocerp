@@ -82,34 +82,45 @@
 
            <xpath expr="//div[hasclass('page')]//h2" position="before">
                <br/>
-               <table class="report-header">
-                    <thead>
-                        <tr>
-                            <td style="line-height: auto !important;">
-                               <p style="line-height: normal !important;"><span style="line-height: normal !important;" t-field="o.partner_id.name"/></p>
-                               <p><span t-field="o.partner_id.street"/></p>
-                               <p><span t-field="o.partner_id.city"/><span t-field="o.partner_id.state_id.name"/><span t-field="o.partner_id.zip"/></p>
-                               <p><span t-field="o.partner_id.country_id.name"/></p>
-                            </td>
+               <div class="container-fluid" >
+                          <div style="width:100%;" class="row">
+                            <div class="col-auto" style="width:50%;text-align:left;margin-left: -10px;">
+                                <p style="line-height: 1 !important;margin: 0px 0px 0px auto !important;"><span style="line-height: normal !important;" t-field="o.partner_id.name"/></p>
+                               <p style="line-height: 1 !important;margin: 0px 0px 0px auto !important;"><span t-field="o.partner_id.street"/></p>
+                               <p style="line-height: 1 !important;margin: 0px 0px 0px auto !important;"><span t-field="o.partner_id.city"/><span t-field="o.partner_id.state_id.name"/><span t-field="o.partner_id.zip"/></p>
+                               <p style="line-height: 1 !important;margin: 0px 0px 0px auto !important;"><span t-field="o.partner_id.country_id.name"/></p>
+                            </div>
 
-                            <td style="width: 40% !important;margin: 0px 0px 0px auto !important;line-height: auto !important;">
-                                <t t-if='o.partner_id.vat'>
+                            <div class="col-auto" style="width:50%;text-align:left;">
+                              <t t-if='o.partner_id.vat'>
                                     <!--style="font-weight: bold;"-->
-                                    <p>VAT ID: <span t-field="o.partner_id.vat"/></p>
+                                    <p style="line-height: 1 !important;margin: 0px 0px 0px auto !important;">VAT ID: <span t-field="o.partner_id.vat"/></p>
                                 </t>
                                 <t t-if='o.partner_id.phone'>
-                                    <p>Phone: <span t-field="o.partner_id.phone"/></p>
+                                    <p style="line-height: 1 !important;margin: 0px 0px 0px auto !important;">Phone: <span t-field="o.partner_id.phone"/></p>
                                 </t>
                                 <t t-if='o.partner_id.email'>
-                                    <p>Email: <span t-field="o.partner_id.email"/></p>
+                                    <p style="line-height: 1 !important;margin: 0px 0px 0px auto !important;">Email: <span t-field="o.partner_id.email"/></p>
                                 </t>
                                 <t t-if='o.partner_id.website'>
-                                    <p>Website: <span t-field="o.partner_id.website"/></p>
+                                    <p style="line-height: 1 !important;margin: 0px 0px 0px auto !important;">Website: <span t-field="o.partner_id.website"/></p>
                                 </t>
-                            </td>
-                        </tr>
-                    </thead>
-                </table>
+                            </div>
+                          </div>
+                      </div>
+<!--               <table class="report-header">-->
+<!--                    <thead>-->
+<!--                        <tr>-->
+<!--                            <td style="">-->
+<!--                               -->
+<!--                            </td>-->
+
+<!--                            <td style="width: 40% !important;margin: 0px 0px 0px auto !important;line-height: 1 !important;">-->
+<!--                                -->
+<!--                            </td>-->
+<!--                        </tr>-->
+<!--                    </thead>-->
+<!--                </table>-->
 
            </xpath>
 
@@ -206,22 +217,22 @@
                 <div class="container-fluid" >
                           <div style="width:100%;" class="row">
                             <div class="col-auto" style="width:50%;text-align:left;">
-                                <img t-if="company.logo" t-att-src="image_data_uri(company.logo)" style="max-height: 70px;;max-width: 70px;" alt="Logo"/>
+                                <img t-if="company.logo" t-att-src="image_data_uri(company.logo)" style="height: 100px;;width: 100px;" alt="Logo"/>
                             </div>
 
                             <div class="col-auto" style="width:50%;text-align:left;">
-                              <p style="font-size:1.3em !important;line-height: .8 !important;font-weight:bold !important;font-family:sans-serif !important;"><span t-field="company.name"/></p>
-                                <p style="font-weight: bold;line-height: .8 !important;">
+                              <p style="font-size:1.3em !important;line-height: 1 !important;margin: 0px 0px 0px auto !important;font-weight:bold !important;font-family:sans-serif !important;"><span t-field="company.name"/></p>
+                                <p style="font-weight: bold;line-height: 1 !important;margin: 0px 0px 0px auto !important;">
                                     <span t-field="company.street"/>
                                 </p>
-                                <p style="font-weight: bold;line-height: .8 !important;">
+                                <p style="font-weight: bold;line-height: 1 !important;margin: 0px 0px 0px auto !important;">
                                     <span t-field="company.city"/>
                                     <span t-field="company.country_id.name"/>
                                 </p>
-                                <p style="line-height: .5 !important;"><span style="font-weight: bold;">VAT ID:</span> <span t-field="company.vat"/></p>
-                                <p style="line-height: .5 !important;"><span style="font-weight: bold;">Email: </span><span t-field="company.email"/></p>
-                                <p style="line-height: .5 !important;"><span style="font-weight: bold;">Website: </span><span t-field="company.website"/></p>
-                                <p style="line-height: .5 !important;"><span style="font-weight: bold;">Phone: </span><span t-field="company.phone"/></p>
+                                <p style="line-height: 1 !important;margin: 0px 0px 0px auto !important;"><span style="font-weight: bold;">VAT ID:</span> <span t-field="company.vat"/></p>
+                                <p style="line-height: 1 !important;margin: 0px 0px 0px auto !important;"><span style="font-weight: bold;">Email: </span><span t-field="company.email"/></p>
+                                <p style="line-height: 1 !important;margin: 0px 0px 0px auto !important;"><span style="font-weight: bold;">Website: </span><span t-field="company.website"/></p>
+                                <p style="line-height: 1 !important;margin: 0px 0px 0px auto !important;"><span style="font-weight: bold;">Phone: </span><span t-field="company.phone"/></p>
                             </div>
                           </div>
                       </div>
