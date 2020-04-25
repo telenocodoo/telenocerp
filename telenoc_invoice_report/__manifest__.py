@@ -12,7 +12,7 @@
     'version': '0.1',
     'depends': ['web'],
     'data': [
-        'views/res_company.xml',
+        # 'views/account_invoice.xml',
         # 'report/sales_report.xml',
         'report/invoice_report.xml',
     ],
